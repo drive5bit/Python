@@ -15,4 +15,4 @@
 - Added print function for usernames
 - Removed discord username
 - Put discord username behind secret variable (unextractable) enter password for discord username
-- Added discord username behind passwordwall
+- Added discord username behind passwordwall (only for repl.it) I will try to fix this if it comes onto the other clients.
