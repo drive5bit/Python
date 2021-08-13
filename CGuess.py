@@ -8,12 +8,12 @@ print("""
 Replit Username: xXEradicationXx
 Github Username: drive5bit
 """)
-discord = os.environ['discord']
-discp = input("Enter password for discord username: ")
-if discp == os.environ['pwd']:
-    print(discord)
-else:
-    print("Let's just move on.")
+# discord = os.environ['discord']
+# discp = input("Enter password for discord username: ")
+# if discp == os.environ['pwd']:
+#     print(discord)
+# else:
+#     print("Let's just move on.")
 def Guess():
     try:
         name = input("What's your name?: ")
