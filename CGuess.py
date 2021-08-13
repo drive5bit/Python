@@ -1,9 +1,19 @@
+import time
+import random
+import os
 # Replit Username: xXEradicationXx
 # Github Username: drive5bit
 # Discord Username: BurningAsh#3369
-
-import time
-import random
+print("""
+Replit Username: xXEradicationXx
+Github Username: drive5bit
+""")
+discord = os.environ['discord']
+discp = input("Enter password for discord username: ")
+if discp == os.environ['pwd']:
+    print(discord)
+else:
+    print("Let's just move on.")
 def Guess():
     try:
         name = input("What's your name?: ")
@@ -22,15 +32,14 @@ def Guess():
               print('Okay. The value was intercepted as response 200.')
               break
           if b == 'n':
-               quit("We are killing the program. Run the program again to play. Don't forget to put your value beneath 100000000000000!")
-               quit()
+               quit(f"Our systems got impatient. They killed the program. Please use the game the right way, thanks. Run the program again to play {name}.")
         secret = int(input(f"What is the secret number now? It has to be between 0 and {a}: "))
         while secret < 0 or secret > a:
           if secret < 0:
-            print("That number is under zero, and that's not allowed. Please try    again!")
+            print("That number is under zero, and that's not allowed. Please try again!")
           if secret > a:
             print('That number is over the limits. Please try again!')
-            secret = int(input(f"What is the secret number now? It has to be between 0      and {a}: "))
+            secret = int(input(f"What is the secret number now? It has to be between 0 and {a}: "))
         print("The computer has started guessing.")
         startTime = time.time()
         computer = random.randint(0, a)
@@ -40,7 +49,7 @@ def Guess():
         print(f"The computer successfully guessed your number. It guessed {str(computer)} and your number was {str(secret)}. The time taken for the computer to get this result was {endTime - startTime} seconds!")
         again = input("Do you want to play the game again? Y/N: ").lower()
         while again not in ['y', 'n']:
-          print("Our programs aren't responding to the value you gave. Plase try    again.")
+          print("Our programs aren't responding to the value you gave. Plase try again.")
           again = input("Do you want to play the game again? Y/N: ").lower()
         if again == 'y':
           print('Okay!')
